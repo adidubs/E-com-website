@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, intial-scale=1.0">
+    <title>
+        RedStore | Ecommerce website Degin
+    </title>
+
+<link rel = "stylesheet" href = "style.css">
+
+<!---<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link rel= "stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link rel = "stylesheet" href="http://stackpath.bootstrapcdn.com/front-awesome/4.7.0/css/front-awesome.min/css"> -->
+
+
+
+
+
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--  Add bootstrap icon Library  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .checked {
+        color : yellow;
+        font-size : 20px;
+    }
+    .unchecked {
+        font-size : 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class ="header">
+<div class = "container">
+<div class = "navbar">
+    <div class = "logo">
+        <img src = "logo.png" width = "125px">
+    </div>
+
+   
+<nav>
+    <ul id="MenuItems">
+        <li><a herf ="index.html">Home</a></li>
+        <li><a herf = "product.html">Products</a></li>
+        <li><a herf = "">About</a></li>
+        <li><a herf = "">Contact</a></li>
+        <li><a herf = "">Account</a></li>
+        <div class="mx-2">
+            <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+          </div>
+         
+    </ul>
+</nav>
+
+ <!-- Login Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="loginModalLabel">Login to RedStore</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       <form>
+         <div class="form-group">
+           <label for="loginInputEmail1">Email address</label>
+           <input type="email" class="form-control" id="loginInputEmail1" aria-describedby="emailHelp">
+           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+         </div>
+         <div class="form-group">
+           <label for="loginInputPassword1">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1">
+         </div>
+         <div class="form-group form-check">
+           <input type="checkbox" class="form-check-input" id="exampleCheck1">
+           <label class="form-check-label" for="exampleCheck1">Check me out</label>
+         </div>
+         <button type="submit" class="btn btn-primary">Login</button>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!--Login Model End --->
+
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="signupModalLabel">Get an RedStore Account</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       <form>
+         <div class="form-group">
+           <label for="signupInputEmail1">Email address</label>
+           <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp">
+           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+         </div>
+         <div class="form-group">
+           <label for="signupInputPassword1">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1">
+         </div>
+         <div class="form-group">
+           <label for="csignupInputPassword1">Confirm Password</label>
+           <input type="password" class="form-control" id="cexampleInputPassword1">
+         </div>
+
+         <button type="submit" class="btn btn-primary">Create Account</button>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!--Sinup Model End -->
+
+
+<img src = "cart.png" width ="30px" height = "30px">
+<img src = "menu.png" class = "menu-icon"
+onclick="menutoggle()">
+</div>
+<div class = "row";>
+    <div class = "col-2">
+        <h1>Get dolled up, <br> Be Fashionable! </h1>
+        <p>
+            “You can have anything you want in life if you dress for it.” <br>          – Edith Head.
+        </p>
+        <a href = "" class = "btn">Explore Now &#8594;</a>
+
+    </div>
+    <div class= "col-2">
+    <img src = "Online-fashion-shopping-tips.jpeg">
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!--------featured categories----------->
+<div class = "Categories">
+    <h2>Featured categories</h2>
+    <div class = "rows">
+    <div class ="small-container">
+
+    <div class = "row">
+        <div class = "col-3"><img src="category-1.jpg" alt= ""></div>
+        <div class = "col-3"><img src="category-2.jpg" alt= ""></div>
+        <div class = "col-3"><img src="category-3.jpg" alt= ""></div>
+        
+    </div>
+</div>
+</div>
+</div>
+
+<!--------featured product----------->
+
+<div class="small-container">
+    <h2 class ="title">Featured Products</h2>
+   <div class= "row">
+    <div class = "col-4">
+        <img src="product-1.jpg" alt="">
+        <h4>Red Printed T-Shirt</h4>
+        <div class = "rating">
+
+        <span class = "fa fa-star checked"></span>
+        <span class = "fa fa-star checked"></span>
+        <span class = "fa fa-star checked"></span>
+        <span class = "fa fa-star checked"></span>
+        <!-- To display unchecked star rating icons -->
+        <span class = "fa fa-star unchecked"></span>
+
+        </div>
+        <p>$50.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-2.jpg" alt="">
+        <h4>Black Shoes </h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$200.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-3.jpg" alt="">
+        <h4>Trackpant</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$100.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-4.jpg" alt="">
+        <h4>Colour T-Shirt</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+
+        </div>
+        <p>$70.00</p>
+
+    </div>
+</div>
+
+<!--------Latest product   ------>
+<h2 class = "title">Latest Products</h2>
+
+<div class= "row">
+    <div class = "col-4">
+        <img src="product-5.jpg" alt="">
+        <h4>Sparx Men's Running Shoes</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$100.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-6.jpg" alt="">
+        <h4>Men's Regular Fit T-Shirt </h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$45.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-7.jpg" alt="">
+        <h4>Men's Premium Cotton Cushion Sports Ankle Socks</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$20.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-8.jpg" alt="">
+        <h4>Marcia Black and Black I Automatic Watch</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+
+        </div>
+        <p>$500.00</p>
+
+    </div>
+</div>
+
+<div class= "row">
+    <div class = "col-4">
+        <img src="product-9.jpg" alt="">
+        <h4>VILLS LAURRENS</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star" ></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$600.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-10.jpg" alt="">
+        <h4> New balance </h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$200.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-11.jpg" alt="">
+        <h4>Bourge</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+
+        </div>
+        <p>$90.00</p>
+
+    </div>
+
+    <div class = "col-4">
+        <img src="product-12.jpg" alt="">
+        <h4>Athleisure Men's Cotton Trackpant</h4>
+        <div class = "rating">
+
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+
+        </div>
+        <p>$120.00</p>
+
+    </div>
+</div>
+</div>
+
+
+<!---- offer----->
+
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src = "exclusive.png" class = "offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available on RedStore</p>
+                <h1>Smart Band 4</h1>
+                <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be. </small>
+                <a herf="" class = "btn">Buy Now &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---testimonial-->
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+                <div class = "rating">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+        
+                </div>
+                <img src="user-1.png">
+                <h3>Sean Parker</h3>
+            </div>
+
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+                <div class = "rating">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+        
+                </div>
+                <img src="user-2.png">
+                <h3>Mike Smith</h3>
+            </div>
+
+
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+                <div class = "rating">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+        
+                </div>
+                <img src="user-3.png">
+                <h3>Marbel Joe</h3>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-------------Brands------------>
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src = "logo-godrej.png" alt="">
+            </div>
+            <div class="col-5">
+                <img src = "logo-oppo.png" alt="">
+            </div>
+            <div class="col-5">
+                <img src = "logo-coca-cola.png" alt="">
+            </div>
+            <div class="col-5">
+                <img src = "logo-paypal.png" alt="">
+            </div>
+            <div class="col-5">
+                <img src = "logo-philips.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!---------------Footer _------->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile Phone.</p>
+
+                <div class="app-logo">
+                    <img src="play-store.png">
+                    <img src="app-store.png">
+                </div>
+            </div>
+
+            <div class="footer-col-2">
+                <img src="logo-white.png">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benifits of the Sport Accessible to the Many.</p>
+            </div>
+
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policiy</li>
+                    <li>Join Affliate</li>
+                </ul>
+            </div>
+
+            <div class="footer-col-3">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>You Tube</li>
+                </ul>
+            </div>
+
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2022</p>
+    </div>
+</div>
+
+
+<!----JS for Toggle menu-->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxheight = "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight = "0px"){
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+</body>
+</html>
